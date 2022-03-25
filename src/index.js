@@ -1,9 +1,13 @@
-function sayHello() {
-  return "Hello World!";
-}
+import { compose, pipe } from "lodash/fp";
 
-function greet(fnMesage) {
-  console.log(fnMesage());
-}
+let input = "   Javascript   ";
+let output = "<div>" + input.trim() + "</div>";
 
-greet(sayHello);
+const trim = (str) => str.trim();
+const wrapInDiv = (str) => `<div>${str}<div>`;
+const toLowerCase = (str) => str.toLowerCase();
+
+const transform = pipe(trim, toLowerCase, wrapInDiv);
+transform(input);
+
+const result = wrapInDiv(toLowerCase(trim(input)));
