@@ -1,9 +1,12 @@
-let book = { title: "Harry Potter" };
+import { Map } from "immutable";
+Map = require("immutable");
 
-function publish(book) {
-  book.isPublished = true;
-}
+let book = Mao({ title: "Harry Potter" });
 
-publish(book);
+// function publish(book) {
+//   book.isPublished = true;
+// }
+
+// publish(book);
 
 console.log(book);
