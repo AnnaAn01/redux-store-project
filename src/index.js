@@ -1,5 +1,6 @@
 import { produce } from "immer";
-let book = { title: "Harry Potter" };
+import { Map } from "immutable";
+let book = Map({ title: "Harry Potter" });
 
 function publish(book) {
   book.isPublished = true;
